@@ -1,0 +1,43 @@
+
+For task HumanEval/101:
+Compile rc     = 1 
+Compile stdout =  
+Compile stderr = Main.java:31: error: cannot find symbol
+                s.wordStrings("Hi, my name is John" ).equals(Arrays.asList("Hi", "my", "name", "is", "John" )),
+                 ^
+  symbol:   method wordStrings(String)
+  location: variable s of type Solution
+Main.java:32: error: cannot find symbol
+                s.wordStrings("One, two, three, four, five, six" ).equals(Arrays.asList("One", "two", "three", "four", "five", "six" )),
+                 ^
+  symbol:   method wordStrings(String)
+  location: variable s of type Solution
+Main.java:33: error: cannot find symbol
+                s.wordStrings("Hi, my name" ).equals(Arrays.asList("Hi", "my", "name" )),
+                 ^
+  symbol:   method wordStrings(String)
+  location: variable s of type Solution
+Main.java:34: error: cannot find symbol
+                s.wordStrings("One,, two, three, four, five, six," ).equals(Arrays.asList("One", "two", "three", "four", "five", "six" )),
+                 ^
+  symbol:   method wordStrings(String)
+  location: variable s of type Solution
+Main.java:35: error: cannot find symbol
+                s.wordStrings("" ).equals(List.of()),
+                 ^
+  symbol:   method wordStrings(String)
+  location: variable s of type Solution
+Main.java:36: error: cannot find symbol
+                s.wordStrings("ahmed     , gamal" ).equals(Arrays.asList("ahmed", "gamal" ))
+                 ^
+  symbol:   method wordStrings(String)
+  location: variable s of type Solution
+6 errors
+ 
+
+Run rc         = 1
+Run stdout     = 
+Run stderr     = Error: Could not find or load main class Main
+Caused by: java.lang.ClassNotFoundException: Main
+
+        

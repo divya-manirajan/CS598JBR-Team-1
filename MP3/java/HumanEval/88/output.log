@@ -1,0 +1,63 @@
+
+For task HumanEval/88:
+Compile rc     = 1 
+Compile stdout =  
+Compile stderr = Main.java:28: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(List.of())).equals(List.of()),
+                                         ^
+    reason: no instance(s) of type variable(s) E#1,E#2 exist so that ArrayList<E#1> conforms to int[]
+  where E#1,E#2 are type-variables:
+    E#1 extends Object declared in class ArrayList
+    E#2 extends Object declared in method <E#2>of()
+Main.java:29: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(List.of(5))).equals(List.of(5)),
+                                         ^
+    reason: no instance(s) of type variable(s) E#1,E#2 exist so that ArrayList<E#1> conforms to int[]
+  where E#1,E#2 are type-variables:
+    E#1 extends Object declared in class ArrayList
+    E#2 extends Object declared in method <E#2>of(E#2)
+Main.java:30: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(Arrays.asList(2, 4, 3, 0, 1, 5))).equals(Arrays.asList(0, 1, 2, 3, 4, 5)),
+                                         ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:31: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(Arrays.asList(2, 4, 3, 0, 1, 5, 6))).equals(Arrays.asList(6, 5, 4, 3, 2, 1, 0)),
+                                         ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:32: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(Arrays.asList(2, 1))).equals(Arrays.asList(1, 2)),
+                                         ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:33: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(Arrays.asList(15, 42, 87, 32 ,11, 0))).equals(Arrays.asList(0, 11, 15, 32, 42, 87)),
+                                         ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:34: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.sortArray(new ArrayList<>(Arrays.asList(21, 14, 23, 11))).equals(Arrays.asList(23, 21, 14, 11))
+                                         ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+7 errors
+ 
+
+Run rc         = 1
+Run stdout     = 
+Run stderr     = Error: Could not find or load main class Main
+Caused by: java.lang.ClassNotFoundException: Main
+
+        

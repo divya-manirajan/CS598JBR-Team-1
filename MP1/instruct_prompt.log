@@ -1,0 +1,1324 @@
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: /usr/lib64-nvidia did not contain ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] as expected! Searching further paths...
+  warn(msg)
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/sys/fs/cgroup/memory.events /var/colab/cgroup/jupyter-children/memory.events')}
+  warn(msg)
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('8013'), PosixPath('//172.28.0.1'), PosixPath('http')}
+  warn(msg)
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('--logtostderr --listen_host=172.28.0.12 --target_host=172.28.0.12 --tunnel_background_save_url=https'), PosixPath('//colab.research.google.com/tun/m/cc48301118ce562b961b3c22d803539adc1e0c19/gpu-t4-s-2wr2lla2ghzg9 --tunnel_background_save_delay=10s --tunnel_periodic_background_save_frequency=30m0s --enable_output_coalescing=true --output_coalescing_required=true --log_code_content')}
+  warn(msg)
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/datalab/web/pyright/typeshed-fallback/stdlib,/usr/local/lib/python3.10/dist-packages')}
+  warn(msg)
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/env/python')}
+  warn(msg)
+/usr/local/lib/python3.10/dist-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('module'), PosixPath('//ipykernel.pylab.backend_inline')}
+  warn(msg)
+2024-09-05 01:03:29.244111: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-09-05 01:03:29.265037: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-09-05 01:03:29.271135: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-09-05 01:03:30.544687: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Working with deepseek-ai/deepseek-coder-6.7b-instruct quantization True...
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /usr/local/lib/python3.10/dist-packages/bitsandbytes/libbitsandbytes_cuda122.so
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+CUDA SETUP: CUDA runtime path found: /usr/local/cuda/lib64/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 7.5
+CUDA SETUP: Detected CUDA version 122
+CUDA SETUP: Loading binary /usr/local/lib/python3.10/dist-packages/bitsandbytes/libbitsandbytes_cuda122.so...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:56<00:56, 56.18s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:16<00:00, 34.91s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:16<00:00, 38.10s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at deepseek-ai/deepseek-coder-6.7b-instruct and are newly initialized: ['model.layers.4.self_attn.rotary_emb.inv_freq', 'model.layers.23.self_attn.rotary_emb.inv_freq', 'model.layers.11.self_attn.rotary_emb.inv_freq', 'model.layers.0.self_attn.rotary_emb.inv_freq', 'model.layers.6.self_attn.rotary_emb.inv_freq', 'model.layers.8.self_attn.rotary_emb.inv_freq', 'model.layers.28.self_attn.rotary_emb.inv_freq', 'model.layers.30.self_attn.rotary_emb.inv_freq', 'model.layers.24.self_attn.rotary_emb.inv_freq', 'model.layers.15.self_attn.rotary_emb.inv_freq', 'model.layers.5.self_attn.rotary_emb.inv_freq', 'model.layers.26.self_attn.rotary_emb.inv_freq', 'model.layers.13.self_attn.rotary_emb.inv_freq', 'model.layers.16.self_attn.rotary_emb.inv_freq', 'model.layers.10.self_attn.rotary_emb.inv_freq', 'model.layers.7.self_attn.rotary_emb.inv_freq', 'model.layers.14.self_attn.rotary_emb.inv_freq', 'model.layers.18.self_attn.rotary_emb.inv_freq', 'model.layers.19.self_attn.rotary_emb.inv_freq', 'model.layers.12.self_attn.rotary_emb.inv_freq', 'model.layers.20.self_attn.rotary_emb.inv_freq', 'model.layers.9.self_attn.rotary_emb.inv_freq', 'model.layers.27.self_attn.rotary_emb.inv_freq', 'model.layers.17.self_attn.rotary_emb.inv_freq', 'model.layers.22.self_attn.rotary_emb.inv_freq', 'model.layers.31.self_attn.rotary_emb.inv_freq', 'model.layers.2.self_attn.rotary_emb.inv_freq', 'model.layers.29.self_attn.rotary_emb.inv_freq', 'model.layers.21.self_attn.rotary_emb.inv_freq', 'model.layers.3.self_attn.rotary_emb.inv_freq', 'model.layers.25.self_attn.rotary_emb.inv_freq', 'model.layers.1.self_attn.rotary_emb.inv_freq']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/generation/utils.py:1270: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use a generation configuration file (see https://huggingface.co/docs/transformers/main_classes/text_generation )
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/generation/utils.py:1468: UserWarning: You are calling .generate() with the `input_ids` being on a device type different than your model's device. `input_ids` is on cpu, whereas the model is on cuda. You may experience unexpected behaviors or slower generation. Please make sure that you have put `input_ids` to the correct device by calling for example input_ids = input_ids.to('cuda') before running `.generate()`.
+  warnings.warn(
+Task_ID HumanEval/81:
+Prompt:
+
+def numerical_letter_grade(grades):
+    """It is the last week of the semester and the teacher has to give the grades
+    to students. The teacher has been making her own algorithm for grading.
+    The only problem is, she has lost the code she used for grading.
+    She has given you a list of GPAs for some students and you have to write 
+    a function that can output a list of letter grades using the following table:
+             GPA       |    Letter grade
+              4.0                A+
+            > 3.7                A 
+            > 3.3                A- 
+            > 3.0                B+
+            > 2.7                B 
+            > 2.3                B-
+            > 2.0                C+
+            > 1.7                C
+            > 1.3                C-
+            > 1.0                D+ 
+            > 0.7                D 
+            > 0.0                D-
+              0.0                E
+    
+
+    Example:
+    grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']
+    """
+
+Response:
+
+def numerical_letter_grade(grades):
+    """It is the last week of the semester and the teacher has to give the grades
+    to students. The teacher has been making her own algorithm for grading.
+    The only problem is, she has lost the code she used for grading.
+    She has given you a list of GPAs for some students and you have to write 
+    a function that can output a list of letter grades using the following table:
+             GPA       |    Letter grade
+              4.0                A+
+            > 3.7                A 
+            > 3.3                A- 
+            > 3.0                B+
+            > 2.7                B 
+            > 2.3                B-
+            > 2.0                C+
+            > 1.7                C
+            > 1.3                C-
+            > 1.0                D+ 
+            > 0.7                D 
+            > 0.0                D-
+              0.0                E
+    
+
+    Example:
+    grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']
+    """
+    letter_grades = []
+    grade_scale = {4.0: 'A+', 3.7: 'A', 3.3: 'A-', 3.0: 'B+', 2.7: 'B', 2.3: 'B-', 2.0: 'C+', 1.7: 'C', 1.3: 'C-', 1.0: 'D+', 0.7: 'D', 0.0: 'D-', 0.0: 'E'}
+    for gpa in grades:
+        for scale in grade_scale:
+            if gpa >= scale:
+                letter_grades.append(grade_scale[scale])
+                break
+    return letter_grades
+
+print(numerical_letter_grade([4.0, 3, 1.7, 2, 3.5]))
+
+# def numerical_letter_grade(grades):
+#    
+Task_ID HumanEval/101:
+Prompt:
+
+def words_string(s):
+    """
+    You will be given a string of words separated by commas or spaces. Your task is
+    to split the string into words and return an array of the words.
+    
+    For example:
+    words_string("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+    words_string("One, two, three, four, five, six") == ["One", "two", "three", "four", "five", "six"]
+    """
+
+Response:
+
+def words_string(s):
+    """
+    You will be given a string of words separated by commas or spaces. Your task is
+    to split the string into words and return an array of the words.
+    
+    For example:
+    words_string("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+    words_string("One, two, three, four, five, six") == ["One", "two", "three", "four", "five", "six"]
+    """
+    return s.replace(',', '').split()
+
+
+print(words_string("Hi, my name is John"))
+print(words_string("One, two, three, four, five, six"))
+
+# Output:
+# ['Hi', 'my', 'name', 'is', 'John']
+# ['One', 'two', 'three', 'four', 'five', 'six']def count_vowels(s):
+    """
+    Write a function that takes a string and returns the number of vowels in the string.
+    The vowels are 'a', 'e', 'i', 'o', and 'u'.
+
+    For example:
+    count_vowels("Hello, world") == 3
+    count_vowels("This is a test") == 3
+    """
+    return sum(s.count(vowel) for vowel in 'aeiou')
+
+
+print(count_vowels("Hello, world"))
+print(count_vowels("This is a test"))
+
+# Output:
+# 3
+# 3def is_palindrome(s):
+    """
+    Write a function that takes a string and returns True if the string is a palindrome and False otherwise.
+    A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
+
+    For example:
+    is_palindrome("radar") == True
+    is_palindrome("hello") == False
+    is_palindrome("A man, a plan, a canal: Panama") ==
+Task_ID HumanEval/36:
+Prompt:
+
+
+def fizz_buzz(n: int):
+    """Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.
+    >>> fizz_buzz(50)
+    0
+    >>> fizz_buzz(78)
+    2
+    >>> fizz_buzz(79)
+    3
+    """
+
+Response:
+
+
+def fizz_buzz(n: int):
+    """Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.
+    >>> fizz_buzz(50)
+    0
+    >>> fizz_buzz(78)
+    2
+    >>> fizz_buzz(79)
+    3
+    """
+    count = 0
+    for i in range(11, n):
+        if i % 11 == 0 or i % 13 == 0:
+            count += str(i).count('7')
+    return count
+
+
+if __name__ == "__s__":
+    import doctest
+    doctest.testmod()
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizzs__, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+    doctest.run_docstring_examples(fizz_buzz, globals(), verbose=True)
+   
+Task_ID HumanEval/88:
+Prompt:
+
+def sort_array(array):
+    """
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """
+
+Response:
+
+def sort_array(array):
+    """
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """
+    if len(array) == 0:
+        return []
+    elif len(array) == 1:
+        return [array[0]]
+    else:
+        if (array[0] + array[-1]) % 2 == 0:
+            return sorted(array, reverse=True)
+        else:
+            return sorted(array)
+
+
+print(sort_array([]))  # []
+print(sortarray([5]))  # [5]
+print(sort_array([2, 4, 3, 0, 1, 5]))  # [0, 1, 2, 3, 4, 5]
+print(sort_array([2, 4, 3, 0, 1, 5, 6]))  # [6, 5, 4, 3, 2, 1, 0]
+
+# 1. 빈 배열이 주어지면 빈 배열을 반환합니다.
+# 2. 배열이
+Task_ID HumanEval/54:
+Prompt:
+
+
+def same_chars(s0: str, s1: str):
+    """
+    Check if two words have the same characters.
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+    True
+    >>> same_chars('abcd', 'dddddddabc')
+    True
+    >>> same_chars('dddddddabc', 'abcd')
+    True
+    >>> same_chars('eabcd', 'dddddddabc')
+    False
+    >>> same_chars('abcd', 'dddddddabce')
+    False
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+    False
+    """
+
+Response:
+
+
+def same_chars(s0: str, s1: str):
+    """
+    Check if two words have the same characters.
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+    True
+    >>> same_chars('abcd', 'dddddddabc')
+    True
+    >>> same_chars('dddddddabc', 'abcd')
+    True
+    >>> same_chars('eabcd', 'dddddddabc')
+    False
+    >>> same_chars('abcd', 'dddddddabce')
+    False
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+    False
+    """
+    return sorted(s0) == sorted(s1)
+
+
+def same_chars_v2(s0: str, s1: str):
+    """
+    Check if two words have the same characters.
+    >>> same_chars_v2('eabcdzzzz', 'dddzzzzzzzddeddabc')
+    True
+    >>> same_chars_v2('abcd', 'dddddddabc')
+    True
+    >>> same_chars_v2('dddddddabc', 'abcd')
+    True
+    >>> same_chars_v2('eabcd', 'dddddddabc')
+    False
+    >>> same_chars_v2('abcd', 'dddddddabce')
+    False
+    >>> same_chars_v2('eabcdzzzz', 'dddzzzzzzzddddabc')
+    False
+    """
+    return Counter(s0) == Counter(s1)
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()
+
+#tests/test_same_chars.py
+import pytest
+from same_chars import same_chars, same_chars_v2
+
+
+@pytest.mark.parametrize(
+    "s0,s1,expected",
+
+Task_ID HumanEval/100:
+Prompt:
+
+def make_a_pile(n):
+    """
+    Given a positive integer n, you have to make a pile of n levels of stones.
+    The first level has n stones.
+    The number of stones in the next level is:
+        - the next odd number if n is odd.
+        - the next even number if n is even.
+    Return the number of stones in each level in a list, where element at index
+    i represents the number of stones in the level (i+1).
+
+    Examples:
+    >>> make_a_pile(3)
+    [3, 5, 7]
+    """
+
+Response:
+
+def make_a_pile(n):
+    """
+    Given a positive integer n, you have to make a pile of n levels of stones.
+    The first level has n stones.
+    The number of stones in the next level is:
+        - the next odd number if n is odd.
+        - the next even number if n is even.
+    Return the number of stones in each level in a list, where element at index
+    i represents the number of stones in the level (i+1).
+
+    Examples:
+    >>> make_a_pile(3)
+    [3, 5, 7]
+    """
+    stones = [n]
+    for i in range(1, n):
+        if n % 2 == 0:
+            stones.append(n + 2 * i)
+        else:
+            stones.append(n + 2 * i)
+    return stones
+
+
+def make_a_pile_v2(n):
+    """
+    Given a positive integer n, you have to make a pile of n levels of stones.
+    The first level has n stones.
+    The number of stones in the next level is:
+        - the next odd number if n is odd.
+        - the next even number if n is even.
+    Return the number of stones in each level in a list, where element at index
+    i represents the number of stones in the level (i+1).
+
+    Examples:
+    >>> make_a_pile_v2(3)
+    [3, 5, 7]
+    """
+    stones = [n]
+    for i in range(1, n):
+        if n % 2 == 0:
+            stones.append(n + 2 * i)
+        else:
+            stones.append(n + 2 * i)
+    return stones
+
+
+def make_a_pile_v3(n):
+    """
+    Given a positive integer n, you have to make a pile of n levels of stones.
+    The first level has n stones.
+    The number of stones in the next level is:
+        - the next odd number if n is odd.
+        - the next even number if n is even
+Task_ID HumanEval/26:
+Prompt:
+from typing import List
+
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    """ From a list of integers, remove all elements that occur more than once.
+    Keep order of elements left the same as in the input.
+    >>> remove_duplicates([1, 2, 3, 2, 4])
+    [1, 3, 4]
+    """
+
+Response:
+from typing import List
+
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    """ From a list of integers, remove all elements that occur more than once.
+    Keep order of elements left the same as in the input.
+    >>> remove_duplicates([1, 2, 3, 2, 4])
+    [1, 3, 4]
+    """
+    result = []
+    for num in numbers:
+        if num not in result:
+            result.append(num)
+    return result
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
+    # Testing with a list of integers
+    numbers = [1, 2, 3, 2, 4]
+    print(remove_duplicates(numbers))  # Output: [1, 2, 3, 4]
+
+    # Testing with a list of integers
+    numbers = [1, 2, 3, 2, 4, 4, 5, 6, 7, 8, 9, 10]
+    print(remove_duplicates(numbers))  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    # Testing with a list of integers
+    numbers = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+Task_ID HumanEval/132:
+Prompt:
+
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+
+Response:
+
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''
+    stack = []
+    for bracket in string:
+        if bracket == '[':
+            stack.append(bracket)
+        elif bracket == ']':
+            if not stack or stack[-1] != '[':
+                return False
+            stack.pop()
+    return any(i == '[' for i in stack)
+
+print(is_nested('[[]]')) # ➞ True
+print(is_nested('[]]]]]]][[[[[]')) # ➞ False
+print(is_nested('[][]')) # ➞ False
+print(is_nested('[]')) # ➞ False
+print(is_nested('[[][]]')) # ➞ True
+print(is_nested('[[]][[')) # ➞ True
+
+# The function works by iterating over the string and pushing any opening brackets onto a stack.
+# When it encounters a closing bracket, it checks if the stack is empty or the last item on the stack is not an opening bracket.
+# If either of these conditions is true, it returns False. Otherwise, it pops the last item off the stack.
+# After iterating over the string, if there are any items left on the stack, it checks if any of them are opening brackets.
+# If so, it returns True. Otherwise, it returns False.
+# This is because a valid subsequence of brackets
+Task_ID HumanEval/46:
+Prompt:
+
+
+def fib4(n: int):
+    """The Fib4 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:
+    fib4(0) -> 0
+    fib4(1) -> 0
+    fib4(2) -> 2
+    fib4(3) -> 0
+    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).
+    Please write a function to efficiently compute the n-th element of the fib4 number sequence.  Do not use recursion.
+    >>> fib4(5)
+    4
+    >>> fib4(6)
+    8
+    >>> fib4(7)
+    14
+    """
+
+Response:
+
+
+def fib4(n: int):
+    """The Fib4 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:
+    fib4(0) -> 0
+    fib4(1) -> 0
+    fib4(2) -> 2
+    fib4(3) -> 0
+    fib4(n) -> fib4(n-1) + fib4(n-2) + fib4(n-3) + fib4(n-4).
+    Please write a function to efficiently compute the n-th element of the fib4 number sequence.  Do not use recursion.
+    >>> fib4(5)
+    4
+    >>> fib4(6)
+    8
+    >>> fib4(7)
+    14
+    """
+    fib = [0, 0, 2, 0]
+    for i in range(4, n+1):
+        fib.append(fib[i-1] + fib[i-2] + fib[i-3] + fib[i-4])
+    return fib[n]
+
+
+def fib5(n: int):
+    """The Fib5 number sequence is a sequence similar to the Fibbonacci sequnece that's defined as follows:
+    fib5(0) -> 0
+    fib5(1) -> 0
+    fib5(2) -> 0
+    fib5(3) -> 2
+    fib5(n) -> fib5(n-1) + fib5(n-2) + fib5(n-3) + fib5(n-4) + fib5(n-5).
+    Please write a function to efficiently compute the n-th element of the fib5 number sequence.  Do not use recursion.
+    >>> fib5(5)
+    2
+    >>> fib5(6)
+    4
+    >>> fib5(7)
+    6
+    >>> fib5(8)
+    10
+    """
+    fib = [0, 0, 0, 2, 0]
+    for i in range(5, n+1):
+        fib.
+Task_ID HumanEval/83:
+Prompt:
+
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+
+Response:
+
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+    return 2 * (10 ** (n - 1))
+
+
+def starts_ends_both(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start and end with 1.
+    """
+    return 10 ** (n - )
+
+
+def starts_ends_neither(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that neither start nor end with 1.
+    """
+    return 8 * (10 ** (n - 2))
+
+
+def starts_ends_either(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+    return 10 ** (n - 1) + 10 ** (n - 1) - 2
+
+
+def starts_ends_both_neither(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start and end with 1 and neither start nor end with 1.
+    """
+    return 10 ** (n - 2)
+
+
+def starts_ends_neither_both(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that neither start nor end with 1 and start and end with 1.
+    """
+    return 10 ** (n - 2)
+
+
+def starts_ends_both_neither_either(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start and end with 1, neither start nor end with 1, and
+    either start or end with 1.
+    """
+    return 10 ** (n - 1)
+Task_ID HumanEval/123:
+Prompt:
+
+def get_odd_collatz(n):
+    """
+    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.
+
+    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined
+    as follows: start with any positive integer n. Then each term is obtained from the 
+    previous term as follows: if the previous term is even, the next term is one half of 
+    the previous term. If the previous term is odd, the next term is 3 times the previous
+    term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.
+
+    Note: 
+        1. Collatz(1) is [1].
+        2. returned list sorted in increasing order.
+
+    For example:
+    get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.
+    """
+
+Response:
+
+def get_odd_collatz(n):
+    """
+    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.
+
+    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined
+    as follows: start with any positive integer n. Then each term is obtained from the 
+    previous term as follows: if the previous term is even, the next term is one half of 
+    the previous term. If the previous term is odd, the next term is 3 times the previous
+    term plus 1. The conjecture is that no matter what value of n, the sequence will always reach 1.
+
+    Note: 
+        1. Collatz(1) is [1].
+        2. returned list sorted in increasing order.
+
+    For example:
+    get_odd_collatz(5) returns [1, 5] # The collatz sequence for 5 is [5, 16, 8, 4, 2, 1], so the odd numbers are only 1, and 5.
+    """
+    collatz = [n]
+    while n != 1:
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+        if n % 2 != 0:
+            collatz.append(n)
+    return sorted(collatz)
+
+
+print(get_odd_collatz(5))  # [1, 5]
+print(get(5))  # [1, 5]
+print(get_odd_collatz(15))  # [1, 5, 11, 17, 95]
+print(get_odd_collatz(100))  # [1, 5, 11, 17, 95, 285]
+print(get_odd_collatz(999999))  # [1, 5, 11, 17, 95, 285, 852, 426, 213, 640, 3
+Task_ID HumanEval/40:
+Prompt:
+
+
+def triples_sum_to_zero(l: list):
+    """
+    triples_sum_to_zero takes a list of integers as an input.
+    it returns True if there are three distinct elements in the list that
+    sum to zero, and False otherwise.
+
+    >>> triples_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> triples_sum_to_zero([1, 3, -2, 1])
+    True
+    >>> triples_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])
+    True
+    >>> triples_sum_to_zero([1])
+    False
+    """
+
+Response:
+
+
+def triples_sum_to_zero(l: list):
+    """
+    triples_sum_to_zero takes a list of integers as an input.
+    it returns True if there are three distinct elements in the list that
+    sum to zero, and False otherwise.
+
+    >>> triples_sum_to_zero([1, 3, 5, 0])
+    False
+    >>> triples_sum_to_zero([1, 3, -2, 1])
+    True
+    >>> triples_sum_to_zero([1, 2, 3, 7])
+    False
+    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])
+    True
+    >>> triples_sum_to_zero([1])
+    False
+    """
+    l.sort()
+    for i in range(len(l) - 2):
+        left = i + 1
+        right = len(l) - 1
+        while left < right:
+            sum = l[i] + l[left] + l[right]
+            if sum < 0:
+                left += 1
+            elif sum > 0:
+                right -= 1
+            else:
+                return True
+    return False
+
+
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()
+
+#tests/test_triples_sum_to_zero.py
+import pytest
+from triples_sum_to_zero import triples_sum_to_zero
+
+
+@pytest.mark.parametrize(
+    "input_list, expected_output",
+    [
+        ([1, 3, 5, 0], False),
+        ([1, 3, -2, 1], True),
+        ([1, 2, 3, 7], False),
+        ([2, 4, -5, 3, 9, 7], True),
+        ([1], False),
+    ],
+)
+def test_triples_sum_to_zero(input_list, expected_output):
+    assert tri
+Task_ID HumanEval/75:
+Prompt:
+
+def is_multiply_prime(a):
+    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100. 
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """
+
+Response:
+
+def is_multiply_prime(a):
+    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100. 
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """
+    def is_prime(n):
+        if n < 2:
+            return False
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    factors = []
+    for i in range(2, a):
+        if a % i == 0 and is_prime(i):
+            factors.append(i)
+            a //= i
+            if len(factors) > 3:
+                return False
+    return len(factors) == 3 and is_prime(a)
+
+
+print(is_multiply_prime(30))  # True
+print(is_multiply_prime(100))  # False
+print(is_multiply_prime(60))  # True
+print(is_multiply_prime(30))  # True
+print(is_multiply_prime(100))  # False
+print(is_multiply_prime(60))  # True
+print(is_multiply_prime(30))  # True
+print(is_multiply_prime(100))  # False
+print(is_multiply_prime(60))  # True
+print(is_multiply_prime(30))  # True
+print(is_multiply_prime(100))  # False
+print(is_multiply_prime(60))  # True
+print(is_multiply_prime(30))  # True
+print(is_multiply_prime(100))  # False
+print(is_multiply_prime(60))  # True
+print(is_multiply_prime(
+Task_ID HumanEval/52:
+Prompt:
+
+
+def below_threshold(l: list, t: int):
+    """Return True if all numbers in the list l are below threshold t.
+    >>> below_threshold([1, 2, 4, 10], 100)
+    True
+    >>> below_threshold([1, 20, 4, 10], 5)
+    False
+    """
+
+Response:
+
+
+def below_threshold(l: list, t: int):
+    """Return True if all numbers in the list l are below threshold t.
+    >>> below_threshold([1, 2, 4, 10], 100)
+    True
+    >>> below_threshold([1, 20, 4, 10], 5)
+    False
+    """
+    for i in l:
+        if i >= t:
+            return False
+    return True
+
+
+def sum_of_digits(n: int):
+    """Return the sum of the digits of n.
+    >>> sum_of_digits(1234)
+    10
+    >>> sum_of_digits(1000)
+    1
+    """
+    return sum(int(i) for i in str(n))
+
+
+def is_prime(n: int):
+    """Return True if n is a prime number.
+    >>> is_prime(2)
+    True
+    >>> is_prime(1)
+    False
+    >>> is_prime(4)
+    False
+    """
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def is_palindrome(s: str):
+    """Return True if s is a palindrome.
+    >>> is_palindrome('radar')
+    True
+    >>> is_palindrome('python')
+    False
+    """
+    return s == s[::-1]
+
+
+def is_anagram(s1: str, s2: str):
+    """Return True if s1 and s2 are anagrams.
+    >>> is_anagram('listen', 'silent')
+    True
+    >>> is_anagram('hello', 'world')
+    False
+    """
+    return sorted(s1) == sorted(s2)
+
+
+def is_subsequence(s1: str, s2: str):
+    """Return True if s1 is a subsequence of s2
+Task_ID HumanEval/55:
+Prompt:
+
+
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+
+Response:
+
+
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+    if n == 1:
+        return 1
+    elif n == 0:
+        return 0
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+
+def main():
+    import doctest
+    doctest.testmod()
+
+
+if __name__ == "__main__":
+    main()
+
+#lab_03/task_02.py
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+    if n == 1:
+        return 1
+    elif n == 0:1
+        return 0
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+
+def main():
+    import doctest
+    doctest.testmod()
+
+
+if __name__ == "__main__":
+    main()
+
+#lab_03/task_03.py
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+    if n == 1:
+        return 1
+    elif n == 0:
+        return 0
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+
+def main():
+    import doctest
+    doctest.testmod()
+
+
+if __name__ == "__main__":
+    main()
+
+#lab_03/task_04.py
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib
+Task_ID HumanEval/23:
+Prompt:
+
+
+def strlen(string: str) -> int:
+    """ Return length of given string
+    >>> strlen('')
+    0
+    >>> strlen('abc')
+    3
+    """
+
+Response:
+
+
+def strlen(string: str) -> int:
+    """ Return length of given string
+    >>> strlen('')
+    0
+    >>> strlen('abc')
+    3
+    """
+    if string == '':
+        return 0
+    else:
+        return 1 + strlen(string[1:])
+
+
+def strrev(string: str) -> str:
+    """ Return reversed string
+    >>> strrev('')
+    ''
+    >>> strrev('abc')
+    'cba'
+    """
+    if string == '':
+        return ''
+    else:
+        return string[-1] + strrev(string[:-1])
+
+
+def strsub(string: str, sub: str) -> int:
+    """ Return number of occurrences of sub in string
+    >>> strsub('', '')
+    1
+    >>> strsub('abc', '')
+    1
+    >>> strsub('abc', 'a')
+    1
+    >>> strsub('abc', 'b')
+    1
+    >>> strsub('abc', 'c')
+    1
+    >>> strsub('abc', 'ab')
+    1
+    >>> strsub('abc', 'bc')
+    1
+    >>> strsub('abc', 'abc')
+    1
+    >>> strsub('abcabc', 'abc')
+    2
+    """
+    if sub == string:
+        return 1
+    elif sub not in string:
+        return 0
+    else:
+        return 1 + strsub(string[string.index(sub) + 1:], sub)
+
+
+def strcmp(string1: str, string2: str) -> int:
+    """ Compare two strings
+    >>> strcmp('', '')
+    0
+    >>> strcmp('a', 'a')
+    0
+    >>> strcmp('b', 'a')
+    1
+    >>> strcmp('a', 'b')
+    -1
+    """
+    if string1 == string2:
+        return 0
+    elif string1 < string2:
+        return -1
+    else:
+        return 1#lab
+Task_ID HumanEval/102:
+Prompt:
+
+def choose_num(x, y):
+    """This function takes two positive numbers x and y and returns the
+    biggest even integer number that is in the range [x, y] inclusive. If 
+    there's no such number, then the function should return -1.
+
+    For example:
+    choose_num(12, 15) = 14
+    choose_num(13, 12) = -1
+    """
+
+Response:
+
+def choose_num(x, y):
+    """This function takes two positive numbers x and y and returns the
+    biggest even integer number that is in the range [x, y] inclusive. If 
+    there's no such number, then the function should return -1.
+
+    For example:
+    choose_num(12, 15) = 14
+    choose_num(13, 12) = -1
+    """
+    for num in range(y, x - 1, -1):
+        if num % 2 == 0:
+            return num
+    return -1
+
+
+print(choose_num(12, 15))  # 14
+print(choose(13, 12))  # -1
+print(choose_num(14, 15))  # 14
+print(choose_num(15, 16))  # 16
+print(choose_num(16, 17))  # 16
+print(choose_num(17, 18))  # 18
+print(choose_num(18, 19))  # 18
+print(choose_num(19, 20))  # 20
+print(choose_num(20, 21))  # 20
+print(choose_num(21, 22))  # 22
+print(choose_num(22, 23))  # 22
+print(choose_num(23, 24))  # 24
+print(choose_num(24, 25))  # 24
+print(choose_num(25, 26))  # 26
+print(choose_num(26, 27))  # 26
+print(choose_num(27, 28))  # 28
+print(choose_num(28, 29))  # 28
+print(choose_num(29, 30))  # 30
+print(choose_num(30, 31))  # 3
+Task_ID HumanEval/21:
+Prompt:
+from typing import List
+
+
+def rescale_to_unit(numbers: List[float]) -> List[float]:
+    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+    such that the smallest number will become 0 and the largest will become 1
+    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+    [0.0, 0.25, 0.5, 0.75, 1.0]
+    """
+
+Response:
+from typing import List
+
+
+def rescale_to_unit(numbers: List[float]) -> List[float]:
+    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+    such that the smallest number will become 0 and the largest will become 1
+    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+    [0.0, 0.25, 0.5, 0.75, 1.0]
+    """
+    min_val = min(numbers)
+    max_val = max(numbers)
+    return [(n - min_val) / (max_val - min_val) for n in numbers]
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
+    print(rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0]))
+    # Output: [0.0, 0.25, 0.5, 0.75, 1.0]
+
+#test_rescale_to_unit.py
+import unittest
+from rescale_to_unit import rescale_to_unit
+
+class TestRescaleToUnit(unittest.TestCase):
+
+    def test_rescale_to_unit(self):
+        self.assertEqual(rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0]), [0.0, 0.25, 0.5, 0.75, 1.0])
+        self.assertEqual(rescale_to_unit([-1.0, 0.0, 1.0]), [0.0, 0.5, 1.0])
+        self.assertEqual(rescale_to_unit([0.0, 0.0, 0.0]), [0.0, 0.0, 0.0])
+
+if __name__
+Task_ID HumanEval/86:
+Prompt:
+
+def anti_shuffle(s):
+    """
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """
+
+Response:
+
+def anti_shuffle(s):
+    """
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """
+    words = s.split(' ')
+    new_words = []
+    for word in words:
+        new_word = ''.join(sorted(word))
+        new_words.append(new_word)
+    return ' '.join(new_words)
+
+
+print(anti_shuffle('Hello World!!!'))
+print(anti_shuffle('Hi'))
+print(anti_shuffle('hello'))
+print(anti_shuffle('a quick brown fox jumps over the lazy dog'))
+print(anti_shuffle('A Quick Brown Fox Jumps Over The Lazy Dog'))
+print(anti_shuffle('1234567890'))
+print(anti_shuffle('The quick brown fox jumps over the lazy dog'))
+print(anti_shuffle('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'))
+print(anti_shuffle('1234567890'))
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi</s>)
+print(antihi<
+Task_ID HumanEval/3:
+Prompt:
+from typing import List
+
+
+def below_zero(operations: List[int]) -> bool:
+    """ You're given a list of deposit and withdrawal operations on a bank account that starts with
+    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and
+    at that point function should return True. Otherwise it should return False.
+    >>> below_zero([1, 2, 3])
+    False
+    >>> below_zero([1, 2, -4, 5])
+    True
+    """
+
+Response:
+from typing import List
+
+
+def below_zero(operations: List[int]) -> bool:
+    """ You're given a list of deposit and withdrawal operations on a bank account that starts with
+    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and
+    at that point function should return True. Otherwise it should return False.
+    >>> below_zero([1, 2, 3])
+    False
+    >>> below_zero([1, 2, -4, 5])
+    True
+    """
+    balance = 0
+    for operation in operations:
+        balance += operation
+        if balance < 0:
+            return True
+    return False
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
+#tests/test_below_zero.py
+import unittest
+from below_zero import below_zero
+
+class TestBelowZero(unittest.TestCase):
+
+    def test_below_zero(self):
+        self.assertEqual(below_zero([1, 2, 3]), False)
+        self.assertEqual(below_zero([1, 2, -4, 5]), True)
+        self.assertEqual(belowzero([1, 2, 3]), False)
+        self.assertEqual(below_zero([1, 2, -4, 5]), True)
+
+if __name__ == '__main__':
+    unittest.main()#src/config.py
+import os
+
+class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get('EMAIL_USER')
+    MAIL_PASSWORD = os.env

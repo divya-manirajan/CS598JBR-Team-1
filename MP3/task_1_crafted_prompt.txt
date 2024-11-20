@@ -1,0 +1,17 @@
+% humanevalx fields
+%   task_id: indicates the target language and ID of the problem. Language is one of ["Python", "Java", "JavaScript", "CPP", "Go"].
+%   prompt: the function declaration and docstring, used for code generation.
+%   declaration: only the function declaration, used for code translation.
+%   canonical_solution: human-crafted example solutions.
+%   test: hidden test samples, used for evaluation.
+%   example_test: public test samples (appeared in prompt), used for evaluation.
+:DELIM_S: ```java
+:DELIM_E: ```
+
+You are an AI programming assistant utilizing the DeepSeek Coder model, developed by DeepSeek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer.
+### Instruction:
+Can you translate the following Python code into Java?
+The new Java code must be enclosed between DELIM_S and DELIM_E
+{prompt}
+{canonical_solution}
+### Response:

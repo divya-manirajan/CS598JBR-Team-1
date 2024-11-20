@@ -1,0 +1,12 @@
+
+For task HumanEval/46:
+Compile rc     = 0 
+Compile stdout =  
+Compile stderr =  
+
+Run rc         = 1
+Run stdout     = 
+Run stderr     = Exception in thread "main" java.lang.AssertionError
+	at Main.main(Main.java:35)
+
+        

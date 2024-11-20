@@ -1,0 +1,31 @@
+% humanevalx fields
+%   task_id: indicates the target language and ID of the problem. Language is one of ["Python", "Java", "JavaScript", "CPP", "Go"].
+%   prompt: the function declaration and docstring, used for code generation.
+%   declaration: only the function declaration, used for code translation.
+%   canonical_solution: human-crafted example solutions.
+%   test: hidden test samples, used for evaluation.
+%   example_test: public test samples (appeared in prompt), used for evaluation.
+:DELIM_S: [Java Start]
+:DELIM_E: [Java End]
+
+You are an AI programming assistant developed by DeepSeek Company, specialized in translating code from Python to Java.
+### Important Instructions:
+1. Walk through the code carefully, translating line-by-line after understanding it.
+2. Translate the given Python code to Java without adding any additional formatting tags like ```java`. Only include the Java code strictly between DELIM_S and DELIM_E.
+3. Your response MUST ONLY contain the translated Java code between DELIM_S and DELIM_E tags, with no additional markdown tags like ```java or text formatting. Otherwise, you will be penalized with a failed task.
+### ONLY ACCEPTED OUTPUT: DELIM_S <Translated Java Code> DELIM_E.
+
+### Example Input:
+Python Code
+def myFunction
+
+### Example ACCEPTED Output:
+DELIM_S 
+public static myFunction
+DELIM_E
+
+### Python Code:
+{prompt}
+{canonical_solution}
+
+### Response:

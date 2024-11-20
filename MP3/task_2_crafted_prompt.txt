@@ -1,0 +1,38 @@
+% humanevalpack
+%    task_id: Indicates the language (Python/JavaScript/Java/Go/C++/Rust) and task id (from 0 to 163) of the problem
+%    prompt: the prompt for models relying on code continuation
+%    declaration: the declaration of the function (same as prompt but without the docstring)
+%    canonical_solution: the correct solution passing all unit tests for the problem
+%    buggy_solution: same as canonical_solution but with a subtle human-written bug causing the unit tests to fail
+%    bug_type: the type of the bug in buggy_solution (one of [missing logic, excess logic, value misuse, operator misuse, variable misuse, function misuse])
+%    failure_symptoms: the problem the bug causes (one of [incorrect output, stackoverflow, infinite loop])
+%    entry_point: the name of the function
+%    import: imports necessary for the solution (only present for Go)
+%    test_setup: imports necessary for the test execution (only present for Go)
+%    test: the unit tests for the problem
+%    example_test: additional unit tests different from test that could be e.g. provided to the model (these are not used in the paper)
+%    signature: the signature of the function
+%    docstring: the docstring describing the problem
+%    instruction: an instruction for HumanEvalSynthesize in the form Write a {language_name} function {signature} to solve the following problem:\n{docstring}
+%
+% DELIM_S and DELIM_E are the start and end tags
+:DELIM_S: <start>
+:DELIM_E: <end>
+
+You are an AI programming assistant. You are an AI programming assistant utilizing the DeepSeek Coder model, developed by DeepSeek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer.
+##Code:
+{declaration}
+{buggy_solution}
+##Tests:
+{test}
+##Instructions:
+1. Execute each and every one of the ##Tests on the ##Code.
+2. Provide a step-by-step analysis of each test case on the provided code. If any of the tests are incorrect then the code is buggy.
+3. Use this information to decide if the code is buggy or correct.
+4. Place the final prediction inside DELIM_S and DELIM_E tags. For example: DELIM_SCorrectDELIM_E 
+##Output formatting:
+Include ONLY the reasoning and the final prediction in the response.
+Do not include the corrected code in the response.
+If the code is incorrect then the prediction should be buggy.
+Place ONLY the final prediction inside DELIM_S and DELIM_E tags. For example: DELIM_SCorrectDELIM_E 
+### Response:

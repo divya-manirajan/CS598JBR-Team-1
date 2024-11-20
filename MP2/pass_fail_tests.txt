@@ -1,0 +1,340 @@
+Running pytest for MP2/Testing_Info/False/81_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/81_test.py F                                                          [100%]
+
+============================================= FAILURES =============================================
+___________________________________ test_numerical_letter_grade ____________________________________
+
+    def test_numerical_letter_grade():
+        assert numerical_letter_grade([4.0, 3, 1.7, 2, 3.5]) == ['A+', 'B', 'C-', 'C', 'A-']
+        assert numerical_letter_grade([1.2]) == ['D+']
+>       assert numericalletter_grade([0.5]) == ['D-']
+E       NameError: name 'numericalletter_grade' is not defined
+
+MP2/Testing_Info/False/81_test.py:7: NameError
+===================================== short test summary info ======================================
+FAILED MP2/Testing_Info/False/81_test.py::test_numerical_letter_grade - NameError: name 'numerica...
+======================================== 1 failed in 0.02s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/101_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/101_test.py .                                                         [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/36_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/36_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.04s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/88_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 7 items
+
+MP2/Testing_Info/False/88_test.py .......                                                    [100%]
+
+======================================== 7 passed in 0.02s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/54_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/54_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/100_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 3 items
+
+MP2/Testing_Info/False/100_test.py ..F                                                       [100%]
+
+============================================= FAILURES =============================================
+______________________________________ test_make_a_pile_large ______________________________________
+
+    def test_make_a_pile_large():
+>       assert make_a_pile(100) == [x for x in range(1, 201, 2)]
+E       assert [100, 102, 10...108, 110, ...] == [1, 3, 5, 7, 9, 11, ...]
+E         At index 0 diff: 100 != 1
+E         Use -v to get more diff
+
+MP2/Testing_Info/False/100_test.py:15: AssertionError
+===================================== short test summary info ======================================
+FAILED MP2/Testing_Info/False/100_test.py::test_make_a_pile_large - assert [100, 102, 10...108, 1...
+=================================== 1 failed, 2 passed in 0.04s ====================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/26_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 3 items
+
+MP2/Testing_Info/False/26_test.py ..F                                                        [100%]
+
+============================================= FAILURES =============================================
+____________________________ test_remove_duplicates[numbers2-expected2] ____________________________
+
+numbers = [1, 2, 3, 2, 4, 3, ...], expected = [1, 2, 3, 4, 5]
+
+    @pytest.mark.parametrize('numbers, expected', [
+        ([], []),
+        ([1, 2, 3, 4], [1, 2, 3, 4]),
+        ([1, 2, 3, 2, 4, 3, 5], [1, 2, 3, 4, 5]),
+    ])
+    def test_remove_duplicates(numbers: List[int], expected: List[int]):
+>       assert remove_duplicates(numbers) == expected
+E       assert [1, 4, 5] == [1, 2, 3, 4, 5]
+E         At index 1 diff: 4 != 2
+E         Right contains 2 more items, first extra item: 4
+E         Use -v to get more diff
+
+MP2/Testing_Info/False/26_test.py:12: AssertionError
+===================================== short test summary info ======================================
+FAILED MP2/Testing_Info/False/26_test.py::test_remove_duplicates[numbers2-expected2] - assert [1,...
+=================================== 1 failed, 2 passed in 0.02s ====================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/132_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/132_test.py .                                                         [100%]
+
+======================================== 1 passed in 0.02s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/46_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/46_test.py F                                                          [100%]
+
+============================================= FAILURES =============================================
+____________________________________________ test_fib4 _____________________________________________
+
+    def test_fib4():
+        assert fib4(0) == 0
+        assert fib4(1) == 0
+        assert fib4(2) == 2
+        assert fib4(3) == 0
+        assert fib4(4) == 2
+        assert fib4(5) == 4
+        assert fib4(6) == 8
+        assert fib4(7) == 14
+        assert fib4(8) == 28
+        assert fib4(9) == 54
+        assert fib4(10) == 104
+>       assert fib4(11) == 208
+E       assert 200 == 208
+E        +  where 200 = fib4(11)
+
+MP2/Testing_Info/False/46_test.py:16: AssertionError
+===================================== short test summary info ======================================
+FAILED MP2/Testing_Info/False/46_test.py::test_fib4 - assert 200 == 208
+======================================== 1 failed in 0.05s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/83_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/83_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.02s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/123_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/123_test.py .                                                         [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/40_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/40_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.02s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/75_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/75_test.py F                                                          [100%]
+
+============================================= FAILURES =============================================
+______________________________________ test_is_multiply_prime ______________________________________
+
+    def test_is_multiply_prime():
+        assert is_multiply_prime(5) == False
+        assert is_multiply_prime(30) == True
+>       assert is_multiply_prime(8) == False
+E       assert True == False
+E        +  where True = is_multiply_prime(8)
+
+MP2/Testing_Info/False/75_test.py:7: AssertionError
+===================================== short test summary info ======================================
+FAILED MP2/Testing_Info/False/75_test.py::test_is_multiply_prime - assert True == False
+======================================== 1 failed in 0.14s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/52_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/52_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/55_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/55_test.py F                                                          [100%]
+
+============================================= FAILURES =============================================
+_____________________________________________ test_fib _____________________________________________
+
+    def test_fib():
+>       assert fib(10) == 55
+E       NameError: name 'fib' is not defined
+
+MP2/Testing_Info/False/55_test.py:4: NameError
+===================================== short test summary info ======================================
+FAILED MP2/Testing_Info/False/55_test.py::test_fib - NameError: name 'fib' is not defined
+======================================== 1 failed in 0.02s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/23_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 3 items
+
+MP2/Testing_Info/False/23_test.py ...                                                        [100%]
+
+======================================== 3 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/102_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/102_test.py .                                                         [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/21_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/21_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/86_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 1 item
+
+MP2/Testing_Info/False/86_test.py .                                                          [100%]
+
+======================================== 1 passed in 0.01s =========================================
+No errors
+****************************
+Running pytest for MP2/Testing_Info/False/3_test.py
+======================================= test session starts ========================================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.5.0
+rootdir: /content/CS598JBR-Team-1
+plugins: typeguard-4.4.0, anyio-3.7.1
+collected 0 items / 1 error
+
+============================================== ERRORS ==============================================
+________________________ ERROR collecting MP2/Testing_Info/False/3_test.py _________________________
+ImportError while importing test module '/content/CS598JBR-Team-1/MP2/Testing_Info/False/3_test.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/lib/python3.10/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+MP2/Testing_Info/False/3_test.py:1: in <module>
+    from Task_3_solution import datetime
+E   ImportError: cannot import name 'datetime' from 'Task_3_solution' (/content/CS598JBR-Team-1/MP2/Testing_Info/False/Task_3_solution.py)
+===================================== short test summary info ======================================
+ERROR MP2/Testing_Info/False/3_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================================= 1 error in 0.06s =========================================
+No errors
+****************************

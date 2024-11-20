@@ -1,0 +1,56 @@
+
+For task HumanEval/52:
+Compile rc     = 1 
+Compile stdout =  
+Compile stderr = Main.java:20: error: incompatible types: cannot infer type arguments for ArrayList<>
+                !s.belowThreshold(new ArrayList<>(Arrays.asList(1, 20, 4, 10)), 5),
+                                               ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:24: error: incompatible types: cannot infer type arguments for ArrayList<>
+                !s.belowThreshold(new ArrayList<>(Arrays.asList(1, 8, 4, 10)), 10)
+                                               ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:19: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.belowThreshold(new ArrayList<>(Arrays.asList(1, 2, 4, 10)), 100),
+                                              ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:21: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.belowThreshold(new ArrayList<>(Arrays.asList(1, 20, 4, 10)), 21),
+                                              ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:22: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.belowThreshold(new ArrayList<>(Arrays.asList(1, 20, 4, 10)), 22),
+                                              ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Main.java:23: error: incompatible types: cannot infer type arguments for ArrayList<>
+                s.belowThreshold(new ArrayList<>(Arrays.asList(1, 8, 4, 10)), 11),
+                                              ^
+    reason: no instance(s) of type variable(s) E,T exist so that ArrayList<E> conforms to int[]
+  where E,T are type-variables:
+    E extends Object declared in class ArrayList
+    T extends Object declared in method <T>asList(T...)
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+6 errors
+ 
+
+Run rc         = 1
+Run stdout     = 
+Run stderr     = Error: Could not find or load main class Main
+Caused by: java.lang.ClassNotFoundException: Main
+
+        
